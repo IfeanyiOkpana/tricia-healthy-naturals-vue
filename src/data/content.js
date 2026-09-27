@@ -15,7 +15,7 @@ export const heroPoints = [
 ];
 
 export const trust = [
-  { icon: 'leaf', title: 'Natural ingredients', text: 'Short lists you can read' },
+  { icon: 'leaf', title: 'Natural ingredients', text: 'Carefully curated just for you' },
   { icon: 'pin', title: 'Made in Nigeria', text: 'Local products, high quality' },
   { icon: 'truck', title: 'Nationwide delivery', text: 'Fee confirmed on WhatsApp' },
   { icon: 'chat', title: 'Order in minutes', text: 'Tap Buy now and chat' },
