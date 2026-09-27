@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Design tokens (RGB triplets so Tailwind can apply opacity) ---------- */
+:root {
+  --canvas: 245 247 238;
+  --surface: 255 255 255;
+  --ink: 20 38 30;
+  --muted: 84 102 92;
+  --line: 216 225 210;
+  --brand: 31 107 66;
+  --brand-text: 31 107 66;
+  --deep: 16 52 38;
+  --leaf: 228 238 222;
+  --gold: 232 163 23;
+  --hibiscus: 179 32 77;
+  --focus: 31 107 66;
+  color-scheme: light;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --canvas: 14 22 18;
+    --surface: 23 34 28;
+    --ink: 236 241 232;
+    --muted: 158 175 165;
+    --line: 41 57 48;
+    --brand: 46 128 80;
+    --brand-text: 116 194 145;
+    --deep: 13 46 32;
+    --leaf: 26 42 33;
+    --gold: 240 176 50;
+    --focus: 240 176 50;
+    color-scheme: dark;
+  }
+}
+:root[data-theme='dark'] {
+  --canvas: 14 22 18;
+  --surface: 23 34 28;
+  --ink: 236 241 232;
+  --muted: 158 175 165;
+  --line: 41 57 48;
+  --brand: 46 128 80;
+  --brand-text: 116 194 145;
+  --deep: 13 46 32;
+  --leaf: 26 42 33;
+  --gold: 240 176 50;
+  --focus: 240 176 50;
+  color-scheme: dark;
+}
+
+html {
+  scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 5rem);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  background: rgb(var(--canvas));
+  color: rgb(var(--ink));
+  line-height: 1.6;
+}
+:focus-visible {
+  outline: 3px solid rgb(var(--focus));
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+.on-deep :focus-visible {
+  outline-color: #fff;
+}
+
+.sticky-safe {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+}
+.fab {
+  position: fixed;
+  right: 1rem;
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  z-index: 40;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Adire-inspired pattern (Yoruba indigo resist-dye cloth), used on the deep-green feature panels */
+.adire {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='white' stroke-opacity='.1' stroke-width='1.5'%3E%3Ccircle cx='14' cy='14' r='9'/%3E%3Ccircle cx='14' cy='14' r='3.5'/%3E%3Ccircle cx='42' cy='42' r='9'/%3E%3Ccircle cx='42' cy='42' r='3.5'/%3E%3Cpath d='M42 5l6 6-6 6-6-6zM14 39l6 6-6 6-6-6z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 56px 56px;
+}
+
+/* One orchestrated page-load moment: the hero photos rise onto the shelf */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(42px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  animation: rise 0.95s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+/* FAQ accordion */
+.faq-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+.faq-panel[data-open='true'] {
+  grid-template-rows: 1fr;
+}
+
+/* Product sheet transition */
+.sheet-enter-active,
+.sheet-leave-active {
+  transition: opacity 0.25s ease;
+}
+.sheet-enter-active .sheet-panel,
+.sheet-leave-active .sheet-panel {
+  transition: transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.sheet-enter-from,
+.sheet-leave-to {
+  opacity: 0;
+}
+.sheet-enter-from .sheet-panel,
+.sheet-leave-to .sheet-panel {
+  transform: translateY(36px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rise {
+    animation: none;
+  }
+  .faq-panel,
+  .sheet-enter-active,
+  .sheet-leave-active,
+  .sheet-enter-active .sheet-panel,
+  .sheet-leave-active .sheet-panel {
+    transition: none;
+  }
+}
