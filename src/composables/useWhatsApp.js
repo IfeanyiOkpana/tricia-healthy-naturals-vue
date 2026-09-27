@@ -4,7 +4,8 @@ import { money } from '../utils/format';
 const waUrl = (text) => `https://wa.me/${BUSINESS.whatsapp}?text=${encodeURIComponent(text)}`;
 
 export function useWhatsApp() {
-  const chatLink = waUrl(`Hello ${BUSINESS.name}! \uD83D\uDC4B I have a question about your products.`);
+  //const chatLink = waUrl(`Hello ${BUSINESS.name}! \uD83D\uDC4B I have a question about your products.`);
+  const chatLink = waUrl(`Hello ${BUSINESS.name}! I have a question about your products.`);
 
   const orderLink = (product, size, qty = 1) => {
     const text = [
