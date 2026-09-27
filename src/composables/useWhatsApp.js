@@ -9,7 +9,8 @@ export function useWhatsApp() {
 
   const orderLink = (product, size, qty = 1) => {
     const text = [
-      `Hello ${BUSINESS.name}! \uD83D\uDC4B`,
+      //Hello ${BUSINESS.name}! \uD83D\uDC4B`,
+      `Hello ${BUSINESS.name}!`,
       '',
       "I'd like to order:",
       `\u2022 ${product.name} (${size.label}) \u00D7 ${qty} = ${money(size.price * qty)}`,
