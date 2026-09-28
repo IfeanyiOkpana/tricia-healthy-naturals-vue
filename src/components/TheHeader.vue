@@ -15,10 +15,10 @@ const close = () => emit('update:modelValue', false);
 <template>
   <header class="sticky-safe z-40 border-b border-line bg-canvas/90 backdrop-blur">
     <div class="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-      <a href="#top" class="flex items-center gap-3" aria-label="Tricia Healthy Naturals, home">
+      <a href="#top" class="flex items-center gap-3" aria-label="Trish Healthy Naturals, home">
         <span class="grid h-11 w-11 place-items-center rounded-full bg-brand text-white"><IconBase name="leaf" :size="22" /></span>
         <span class="leading-none">
-          <span class="block font-display text-[1.35rem] font-extrabold tracking-tight">Tricia</span>
+          <span class="block font-display text-[1.35rem] font-extrabold tracking-tight">Trish</span>
           <span class="mt-0.5 block text-xs font-medium text-muted">Healthy Naturals</span>
         </span>
       </a>

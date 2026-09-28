@@ -2,7 +2,7 @@
 // BUSINESS SETTINGS  (edit these)
 // ---------------------------------------------------------------------------
 export const BUSINESS = {
-  name: 'Tricia Healthy Naturals',
+  name: 'Trish Healthy Naturals',
   // WhatsApp number in international format, digits only.
   // Nigerian example: 0801 234 5678  ->  2348012345678
   whatsapp: '2348131344289',

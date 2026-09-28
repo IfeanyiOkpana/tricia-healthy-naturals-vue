@@ -21,7 +21,7 @@ const year = new Date().getFullYear();
       <div>
         <div class="flex items-center gap-3">
           <span class="grid h-11 w-11 place-items-center rounded-full bg-white/10"><IconBase name="leaf" :size="22" /></span>
-          <span class="font-display text-xl font-extrabold tracking-tight">Tricia Healthy Naturals</span>
+          <span class="font-display text-xl font-extrabold tracking-tight">Trish Healthy Naturals</span>
         </div>
         <p class="mt-4 max-w-sm text-white/75">Natural flours, nuts and honey, made in Nigeria and delivered to your door.</p>
       </div>
@@ -48,7 +48,7 @@ const year = new Date().getFullYear();
     </div>
     <div class="border-t border-white/10">
       <div class="mx-auto max-w-7xl px-4 py-6 text-sm text-white/65 sm:px-6 lg:px-8">
-        <p>&copy; {{ year }} Tricia Healthy Naturals. All rights reserved.</p>
+        <p>&copy; {{ year }} Trish Healthy Naturals. All rights reserved.</p>
         <!--<p class="mt-2 max-w-3xl">Our products are natural food items. They are not intended to diagnose, treat, cure or prevent any disease. Speak to a health professional if you are pregnant, nursing, on medication or have a medical condition, including diabetes.</p>-->
       </div>
     </div>

@@ -9,7 +9,7 @@ import { promises } from '../data/content';
       <div>
         <h2 class="font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl">Healthy naturals, made from crops we know and trust.</h2>
         <p class="mt-6 max-w-lg text-lg leading-relaxed text-muted">
-          Tricia Healthy Naturals is a Nigerian business built on a simple idea: what you cook and eat should be easy to understand. We keep our ingredient lists short, tell you what each product is for, and answer your questions personally.
+          Trish Healthy Naturals is a Nigerian business built on a simple idea: what you cook and eat should be easy to understand. We keep our ingredient lists short, tell you what each product is for, and answer your questions personally.
         </p>
       </div>
       <dl class="divide-y divide-line border-y border-line">
